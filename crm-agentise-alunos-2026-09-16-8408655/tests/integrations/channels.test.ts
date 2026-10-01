@@ -1,0 +1,15 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { syncZernioChannels } from '../../supabase/functions/_shared/channel-sync.ts';
+import { registerUazapiWebhook } from '../../src/lib/uazapi-webhook.ts';
+function fakeDb(rows:any[]){return {from:()=>{let filters:Record<string,unknown>={},patch:any=null,insert:any=null;const q:any={select:()=>q,eq:(k:string,v:unknown)=>{filters[k]=v;return q;},update:(v:any)=>{patch=v;return q;},upsert:(v:any)=>{insert=v;return q;},then:(resolve:any)=>{if(insert){if(!rows.some(x=>x.external_id===insert.external_id))rows.push({id:'new-'+insert.external_id,enabled:true,...insert});return resolve({error:null});}const selected=rows.filter(r=>Object.entries(filters).every(([k,v])=>r[k]===v));if(patch)selected.forEach(r=>Object.assign(r,patch));resolve({data:selected,error:null});}};return q;}};}
+test('descobre números em perfis diferentes sem reativar número desativado nem alterar suas preferências',async()=>{
+ const saved=globalThis.fetch;const rows=[{id:'old',provider:'zernio',external_id:'a',enabled:false,operator_id:'maria',pipeline_id:'p1',phone:'old'},{id:'gone',provider:'zernio',external_id:'removed',connected:true}];
+ globalThis.fetch=async(input:any)=>new Response(JSON.stringify(String(input).endsWith('/accounts')?{accounts:[{_id:'a',platform:'whatsapp',profileId:{_id:'profile-1'}},{_id:'b',platform:'whatsapp',profileId:{_id:'profile-2'}},{_id:'instagram',platform:'instagram'}]}:{phone:{display_phone_number:'+551100000001'}}));
+ try{await syncZernioChannels(fakeDb(rows),'demo');assert.equal(rows.length,3);assert.equal(rows[0].enabled,false);assert.equal(rows[0].operator_id,'maria');assert.equal(rows[0].pipeline_id,'p1');assert.equal(rows[1].connected,false);assert.equal(rows[2].profile_id,'profile-2');}finally{globalThis.fetch=saved;}
+});
+test('resposta inválida do Zernio não desconecta números existentes',async()=>{const saved=globalThis.fetch;const rows=[{provider:'zernio',external_id:'a',connected:true}];globalThis.fetch=async()=>new Response('{}');try{await assert.rejects(syncZernioChannels(fakeDb(rows),'demo'));assert.equal(rows[0].connected,true);}finally{globalThis.fetch=saved;}});
+test('webhook Uazapi é registrado no destino específico do número e com os filtros solicitados',async()=>{
+ const saved=globalThis.fetch;let registered:any;const target='https://example.com/functions/v1/whatsapp-inbound?provider=uazapi&channel_id=demo&secret=synthetic';globalThis.fetch=async(_input:any,init:any)=>{if(init?.method==='POST'){registered=JSON.parse(init.body);return new Response('{}');}return new Response(JSON.stringify(registered?[registered]:[]));};
+ try{await registerUazapiWebhook('https://example.com','fake',target);assert.equal(registered.url,target);assert.deepEqual(registered.events,['messages','connection']);assert.deepEqual(registered.excludeMessages,['wasSentByApi','isGroupYes']);assert.equal(registered.addUrlEvents,false);assert.equal(registered.addUrlTypesMessages,false);}finally{globalThis.fetch=saved;}
+});
