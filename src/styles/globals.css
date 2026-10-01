@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Agentise: área de trabalho clara e navegação azul-marinho.
+   A referência aprovada em 08/09/2026 substitui o antigo tema glass. */
+@theme {
+  --color-bg-primary: #F7F9FC;
+  --color-bg-card: #FFFFFF;
+  --color-bg-muted: #F1F5F9;
+  --color-bg-selected: #E8EEF8;
+  --color-accent-primary: #2563EB;
+  --color-accent-secondary: #2549A3;
+  --color-text-primary: #182235;
+  --color-text-secondary: #64748B;
+  --color-text-label: #475569;
+  --color-success: #047857;
+  --color-error: #DC2626;
+  --color-warning: #A16207;
+  --color-teal: #0F766E;
+  --color-purple: #7C3AED;
+  --color-border-card: #E3EAF5;
+  --color-border-soft: #DCE5F0;
+  --color-border-divider: #EDF1F7;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 14px;
+}
+
+:root {
+  color-scheme: light;
+  --accent-primary: #2563EB;
+  --accent-secondary: #2549A3;
+  --gradient-primary: linear-gradient(135deg, #233E91, #2563EB);
+  --shadow-popover: 0 8px 28px rgba(15, 23, 42, 0.10);
+  --sidebar-bg: #081629;
+  --sidebar-text: #C5CEDC;
+  --sidebar-muted: #95A3B8;
+  --workspace-padding: 24px;
+}
+
+html, body, #root { min-height: 100vh; }
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* { font-family: var(--font-sans); }
+::selection { background: #DBEAFE; color: #1E3A8A; }
+button:not(:disabled), [role="button"]:not([aria-disabled="true"]) { cursor: pointer; }
+input, select, textarea { accent-color: var(--accent-primary); }
+select option { background: var(--color-bg-card); color: var(--color-text-primary); }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+@layer components {
+  /* Nomes mantidos para compatibilidade com os módulos existentes. */
+  .glass-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--radius-card);
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+  }
+  .glass-card-hover:hover {
+    border-color: #BCCCE3;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+  }
+  .glass-surface { background: var(--color-bg-card); border: 1px solid var(--color-border-card); }
+  .text-display { font-weight: 650; letter-spacing: -0.035em; }
+  .text-stat { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.04em; }
+  .text-label { font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.7rem; color: var(--color-text-secondary); }
+  .text-body { font-weight: 400; font-size: 0.875rem; color: var(--color-text-primary); }
+  .text-muted { color: var(--color-text-secondary); }
+  .page-content { width: 100%; max-width: 1500px; margin-inline: auto; }
+  .page-heading { min-width: 0; }
+  .page-heading h1 { margin-top: 12px; font-size: 2rem; line-height: 1.2; font-weight: 650; letter-spacing: -0.045em; }
+  .page-heading p { margin-top: 10px; color: var(--color-text-secondary); font-size: 0.875rem; line-height: 1.6; }
+  .page-heading .text-label { font-size: 0.65rem; letter-spacing: 0.14em; }
+  .section-tabs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+  .section-tab { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 8px 14px; border-radius: 8px; font-size: 0.8125rem; font-weight: 500; color: var(--color-text-secondary); transition: background 150ms ease, color 150ms ease; }
+  .section-tab:hover { color: var(--color-text-primary); background: var(--color-bg-muted); }
+  .section-tab[aria-pressed="true"] { background: #E2E8F0; color: var(--color-text-primary); }
+  .resource-icon { display: grid; place-items: center; flex-shrink: 0; width: 64px; height: 72px; border-radius: 10px; color: #BED5FF; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(135deg, #102A5D, #254F9F); background-size: 16px 16px, 16px 16px, 100% 100%; }
+}
+
+.app-main { padding: 24px var(--workspace-padding) 40px; }
+.app-sidebar { background: var(--sidebar-bg); color: var(--sidebar-text); }
+.sidebar-link { display: flex; align-items: center; gap: 12px; min-height: 42px; padding: 10px 12px; border: 1px solid transparent; border-radius: 9px; font-size: 13px; font-weight: 450; color: var(--sidebar-text); transition: background 150ms ease, color 150ms ease; }
+.sidebar-link:hover { background: rgba(255,255,255,.045); color: white; }
+.sidebar-link[aria-current="page"] { background: #14264D; border-color: #20365F; color: #EDF3FF; }
+.sidebar-link[aria-current="page"] svg { color: #91BAF4; }
+.sidebar-link[aria-current="page"]::after { content: ''; width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: #60A5FA; margin-left: auto; }
+.sidebar-collapsed .sidebar-link { justify-content: center; padding-inline: 0; }
+.sidebar-collapsed .sidebar-link::after { display: none; }
+.app-sidebar ::-webkit-scrollbar-thumb { background: #28364C; }
+.app-sidebar :focus-visible { outline-color: #93C5FD; }
+.workspace-canvas { margin: -24px calc(-1 * var(--workspace-padding)) -40px; height: calc(100% + 64px); display: flex; flex-direction: column; min-height: 0; }
+@media (min-width: 1024px) { :root { --workspace-padding: 40px; } }
+@media (min-width: 1600px) { :root { --workspace-padding: 64px; } }
+@media (max-width: 639px) {
+  :root { --workspace-padding: 16px; }
+  .app-main { padding-top: 20px; }
+  .page-heading h1 { font-size: 1.75rem; margin-top: 8px; }
+  .page-heading p { margin-top: 8px; }
+  .workspace-canvas { margin-top: -20px; height: calc(100% + 60px); }
+}
+
+/* -----------------------------------------------------------------------------
+   Focus ring — accent-aware, accessible
+   ----------------------------------------------------------------------------- */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* -----------------------------------------------------------------------------
+   Message entrance — aplicada só a mensagens novas (ver MessageThread). Roda
+   uma única vez na montagem do nó; como a key é estável, a troca balão
+   otimista→linha real NÃO re-dispara a animação.
+   ----------------------------------------------------------------------------- */
+@keyframes message-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.message-in {
+  animation: message-in 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .message-in {
+    animation: none;
+  }
+}

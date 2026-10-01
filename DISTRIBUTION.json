@@ -1,0 +1,1101 @@
+{
+  "edition": "students",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "7c098ec7ae4300571145ac4be1d8698f94cce0f7ad4388b8d1e2c5db2e7ef368"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "3e08c3ae6a458db3ce77b202acbbc9d7d5834fa5899e4064dfb9a04c87b700bc"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8879bcee5cb4147fbfd46f05ea6eba57e26b69cc97fb2d0e6f7e7af730b0eb3e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "eb15d81eba1cc5402a9fa4281ae702879c7215816d28469da0856698b5717949"
+    },
+    {
+      "path": "api/bootstrap-status.ts",
+      "sha256": "0e87e9d3393f88e15cd6b2b4e12839370f44f8307b85426f786641c24e32f1d7"
+    },
+    {
+      "path": "api/bootstrap.ts",
+      "sha256": "a9abbcd1eb55de97c7764383c205172c19aa31e03de2f2b9c9cac42241772cb5"
+    },
+    {
+      "path": "api/channels.ts",
+      "sha256": "814ac4d64b9cccd34d0b85c0e676174f59fbdfc228478391890223ca90f3d9ca"
+    },
+    {
+      "path": "api/credentials.ts",
+      "sha256": "e12a02adec9f9b5bd10c5acff1a6d5628cf5133afd9d95b2be8bb8ad281b7990"
+    },
+    {
+      "path": "api/health.ts",
+      "sha256": "e388bf0e5609561ea409eedee5dbeada3abc9ef801b18f78e9bdfc2d8ab12c02"
+    },
+    {
+      "path": "api/uazapi-status.ts",
+      "sha256": "19ddd09d1d65a571efed56b0256255ee56be601962077f1b2538c47e32be4c86"
+    },
+    {
+      "path": "api/validate.ts",
+      "sha256": "430c436d1b71ac50036cfba980cdf9dc8d84c82c72d5d5b5ee4008332426baea"
+    },
+    {
+      "path": "api/zernio-connect.ts",
+      "sha256": "b9afd57480f055099c201d41781e19dc34c6459fbb76466f5ea6d8c918ac0a7e"
+    },
+    {
+      "path": "components.json",
+      "sha256": "7e575e23cec9a3bfbc552680eadadf2a0566fe51e5510806580ab196ee549664"
+    },
+    {
+      "path": "demo/README.md",
+      "sha256": "0a3de2bdecb6ab89d4a21c2579066bfd4ec43b4bac8b6ad609dd7dd6cffb86ab"
+    },
+    {
+      "path": "demo/data.ts",
+      "sha256": "c51db9b46eb8f4f320699a455bb5671e213f2c3f6c27c3bcb7e9bce0c5b332a0"
+    },
+    {
+      "path": "demo/plugin.ts",
+      "sha256": "8627efdffbce11e463d06e3243ff502f3cecfcdbe5b034a8ee907a67057386e6"
+    },
+    {
+      "path": "index.html",
+      "sha256": "2da12cbdb2ed314cccac8f5210e96395c150aa1875eae8e9be0208b939d678b7"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7b2f2e3584ab265343e0a70f5b4d69b4b5a72ed498f953ced56ce433068932bc"
+    },
+    {
+      "path": "package.json",
+      "sha256": "7ac9f6ff510e924036879c85f98fde8bc2c8f4d0fa328f39cb772cf17d286c1b"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "c61fc33b2d2ed5d82c39999d50342a6d3e5ce51e407738f03d0413df17bfe69d"
+    },
+    {
+      "path": "public/agentise-mark.png",
+      "sha256": "17198389923a5d5dbe1018c056aec58018402a89e9e50a57afb168e2d76c48cd"
+    },
+    {
+      "path": "public/ah-tracker.js",
+      "sha256": "3a81015ca76fd9de26f174ffc884b3061f2a57100baeba77de498ef0b3589123"
+    },
+    {
+      "path": "public/favicon-32.png",
+      "sha256": "cc44a2e21b41b6a049151d14eb348cdd9206e4096da947e94f751ae58573ebf1"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "449f0cba990b07d8f81b5b6fcfb399e011ae4dbe1926202b57074ce60b3672d8"
+    },
+    {
+      "path": "scripts/deploy-functions.mjs",
+      "sha256": "31bb15b86230b08b82a1b2a389758739300cda4503e9d2535e201f46379f7641"
+    },
+    {
+      "path": "scripts/package-students.mjs",
+      "sha256": "7d79c54e93e1ecd73bc3af6709602281b4709ee2ac35e46875f3fd5459a9c80b"
+    },
+    {
+      "path": "scripts/push-migrations.mjs",
+      "sha256": "7b0f8d1300279b0a09843d5a7f5fe16df625c9808f6a48d08ce1dd113673075b"
+    },
+    {
+      "path": "setup.config.ts",
+      "sha256": "2ffdaff7f21bc1729d6400f09ca7bc21d9a80a507b1dbde03dc913a1761e6cb7"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "7cb863684845250347a1aaac44c78924524b7b03e2c04489365dbb2d606a7522"
+    },
+    {
+      "path": "src/app/layout/AppLayout.tsx",
+      "sha256": "4a1ca091f5e302c414ca39065218f071291b8791bd0182522c21355b12bdfaa0"
+    },
+    {
+      "path": "src/app/layout/Header.tsx",
+      "sha256": "15cb941dfbd0cae9f1ca825161f820702b2525cf4ef5b01b88c45b92d3699a41"
+    },
+    {
+      "path": "src/app/layout/MobileNav.tsx",
+      "sha256": "a1d81dda3360312be40d963939c31d0a6fcac6a21eb55535b64d096d69df7cf5"
+    },
+    {
+      "path": "src/app/layout/Sidebar.tsx",
+      "sha256": "248f862a74b69e554786a5b1d6698952d4ab5b0302213aa4989e1bad9a14a3d8"
+    },
+    {
+      "path": "src/app/layout/nav-config.ts",
+      "sha256": "34e162421d88a5b867e366fdbb2202b84032cecc8bdb6eb0f6c5e823f073a1e2"
+    },
+    {
+      "path": "src/app/providers/AppUserProvider.tsx",
+      "sha256": "60e55d3fa3903fe262236a22c0949bddda91c2d2194896b7810ce02b89483547"
+    },
+    {
+      "path": "src/app/providers/AuthProvider.tsx",
+      "sha256": "82353bfdb437ced16ff054321f9e52786ec088a2dfd1c4bcc4bcdc3ab10f034e"
+    },
+    {
+      "path": "src/app/providers/SupabaseProvider.tsx",
+      "sha256": "5f0ef89175183d4f8ce3cce89668add6df39b2e6507969bba9c431ac5149b0cf"
+    },
+    {
+      "path": "src/app/router.tsx",
+      "sha256": "87fd64b5c30147023702528a641cb90a0bad9f97137e8861a01cc4ce04ed18be"
+    },
+    {
+      "path": "src/app/routes/auth/AuthShell.tsx",
+      "sha256": "5faaf7c70ac9337113efffa18498139c2ddee325682ffb80b72abae1adaa69fc"
+    },
+    {
+      "path": "src/app/routes/auth/LoginPage.tsx",
+      "sha256": "535ffe4dce64f0412dcfaaeb0415bad18e592107f2aec4c2a78cd44feda01152"
+    },
+    {
+      "path": "src/app/routes/auth/SignupPage.tsx",
+      "sha256": "d04dd449633ab737e456125b9b819f2c7c9b6192d44d61d1ae6cc32cb396eb3b"
+    },
+    {
+      "path": "src/app/routes/campaigns/CampaignsPage.tsx",
+      "sha256": "2d80f5d4b341a1f4bd27e88ad22b5e9591ef06ce8be8e5c605ad2d54a0a9f932"
+    },
+    {
+      "path": "src/app/routes/contacts/ContactDetailPage.tsx",
+      "sha256": "de8cf82f2a7c3b548913ccd17374871abbeac1517a0d4a22c6439714ed9487b6"
+    },
+    {
+      "path": "src/app/routes/contacts/ContactsPage.tsx",
+      "sha256": "d4b1ed0f1dfede2445dcdc482665921e079d0d8d6e3807bd959277ebc725b28b"
+    },
+    {
+      "path": "src/app/routes/dashboard/DashboardPage.tsx",
+      "sha256": "7760326ffdfbff15082f97add965881e3ec3593b0e0d237f15827bec702c2858"
+    },
+    {
+      "path": "src/app/routes/funil/FunilPage.tsx",
+      "sha256": "76b63a8b00e3729111e948a81e7afc93f82230ba16fdb48817624e2b9d8aa704"
+    },
+    {
+      "path": "src/app/routes/inbox/InboxPage.tsx",
+      "sha256": "7245288af084143a71d9da9f15d2f00eb2cd3cc509240cbb6546b4df302f38a1"
+    },
+    {
+      "path": "src/app/routes/invite/InvitePage.tsx",
+      "sha256": "0cafabfe7586480e96f0d727077aea47e0bd905e5e7541ad67ba9334c9f55b32"
+    },
+    {
+      "path": "src/app/routes/settings/CredentialsPage.tsx",
+      "sha256": "9603fc16e00977a4627ddffbd9f7ab1c4bff9a8ddf30b30dac3b0952d42dd151"
+    },
+    {
+      "path": "src/app/routes/settings/SettingsPage.tsx",
+      "sha256": "d628a6656ebd0f576fe27341a36d22808775ee38c1258bdf34dcff325c9cfe9a"
+    },
+    {
+      "path": "src/app/routes/settings/sections/AccountSettings.tsx",
+      "sha256": "d9ba2338364b7a098b774c51340564f60d1a4eae35256dd6baa592a672cfcc64"
+    },
+    {
+      "path": "src/app/routes/settings/sections/ChannelsSettings.tsx",
+      "sha256": "89a4f853d70efada3337ed3ed05940af7550c0efa79cce3bf2abbb6a5c4b2754"
+    },
+    {
+      "path": "src/app/routes/settings/sections/LeadAssignmentSettings.tsx",
+      "sha256": "6e5647b1f8e4433494aa087a6feb3a043101279554e262fdb92ec427d26dc763"
+    },
+    {
+      "path": "src/app/routes/settings/sections/ProductsSettings.tsx",
+      "sha256": "0ded57e4dc2cb51a51d52ec0e0e7267dfb1ca912bdbaf0752fb1a8b7f25e0465"
+    },
+    {
+      "path": "src/app/routes/settings/sections/TeamSettings.tsx",
+      "sha256": "c2623ebc8f7baaed45364b6b0834f16c87b75de1ad25213c848c105a011cc234"
+    },
+    {
+      "path": "src/app/routes/settings/sections/UazapiCard.tsx",
+      "sha256": "5aa834f15b346da98cda4145f5afd64d8581dc65ce2c4a446d3ef4f13bd36b2f"
+    },
+    {
+      "path": "src/app/routes/setup/SetupPage.tsx",
+      "sha256": "825e162a8ce28b77f7bb5649634ea094902f25155016e2ee2118f4db814919b6"
+    },
+    {
+      "path": "src/app/routes/setup/whatsappProviders.ts",
+      "sha256": "dd839019936c7f675134aee1b79f429298c4437ac4baf6fce8cd7df1d35b757f"
+    },
+    {
+      "path": "src/components/LoadErrorBanner.tsx",
+      "sha256": "14ceddb186f9ed6e76878d382d5ff212c4873c4f1923a12ec68577cc3ff52c60"
+    },
+    {
+      "path": "src/components/NotificationsDropdown.tsx",
+      "sha256": "82b06291b6d9c318c16ad5cf699c6fb68260efab4dda794ad4f4eabe4508027f"
+    },
+    {
+      "path": "src/components/SectionStub.tsx",
+      "sha256": "cc2fc4a731b9378c6098ecfff0b59a95477bfb749e12b168ca25c91f0d1ffab4"
+    },
+    {
+      "path": "src/components/campaigns/CampaignWizard.tsx",
+      "sha256": "8b9802350f4239439ee5072454b702f37be992846efc66b66b9da5bbe2087844"
+    },
+    {
+      "path": "src/components/campaigns/CampaignsList.tsx",
+      "sha256": "8330e713d61fce1bcd2f8bb6eb789b4a3c36bc010b588afad3d7688dd5ac090b"
+    },
+    {
+      "path": "src/components/campaigns/DispatchMetrics.tsx",
+      "sha256": "d5a195b1fa0cbeb6ad4fd00952638edc045552e88caa42a7dada162ef8d40990"
+    },
+    {
+      "path": "src/components/campaigns/TemplatesList.tsx",
+      "sha256": "fff32d9ca9535d875e9dadeb31694c9920501def3618f2eecffad02bd0581dbd"
+    },
+    {
+      "path": "src/components/campaigns/UtmBuilder.tsx",
+      "sha256": "3ec8be423ddd629e389c10028cf76cc1582ded3b404a2898e93c62a914214fce"
+    },
+    {
+      "path": "src/components/campaigns/UtmChannelMapEditor.tsx",
+      "sha256": "ebef51303c055972b5de1af401496a99cb3de046086fc808067f1b99deb0279d"
+    },
+    {
+      "path": "src/components/contacts/ContactFormDialog.tsx",
+      "sha256": "3ad3d45945e4d53d91cf41bcac1f1695db7016758264000b896c5b934dd9f3c3"
+    },
+    {
+      "path": "src/components/contacts/ImportContactsDialog.tsx",
+      "sha256": "5da0d3ba6c2f242e0ea91ec64643810fdd2999c757ef0a495e9afe6797a14641"
+    },
+    {
+      "path": "src/components/contacts/TagManagerDialog.tsx",
+      "sha256": "e01ed425f79c9f3a39f06b6905af9aa1daef409fb95ac5dadd958e88a15d871e"
+    },
+    {
+      "path": "src/components/credentials/CredentialField.tsx",
+      "sha256": "ca89af9619fe8a0e027da928863132bc77772fdcad877688dab07c0f8519006c"
+    },
+    {
+      "path": "src/components/crm/AddToPipelineDialog.tsx",
+      "sha256": "50ccc9b0ab7fa0d7696fd08ab6264b0837378425da01edbcfd95f325e9de90b8"
+    },
+    {
+      "path": "src/components/crm/NextActions.tsx",
+      "sha256": "59ca86d766431b8492d7fcca1d9536298327de60681a9df44ac735a1e6defefb"
+    },
+    {
+      "path": "src/components/dashboard/widgets.tsx",
+      "sha256": "6dad5388b0637fbed50c625048853c48613431f20ff060c8933db104515f25c6"
+    },
+    {
+      "path": "src/components/funil/DealDrawer.tsx",
+      "sha256": "b492e14da5405b4125e6010d60290b2c20caaa2f0493e11f6b5e22866cdadd9d"
+    },
+    {
+      "path": "src/components/funil/FunilFilter.tsx",
+      "sha256": "657de7d557f6519707b230b0a23de0b51486bb731d2c6c9e0dae49f68660f520"
+    },
+    {
+      "path": "src/components/funil/FunilManager.tsx",
+      "sha256": "e0deb05f92b4e5b9b4e52adac51f11e8d480a2a7481f2d27443e17c56c81652a"
+    },
+    {
+      "path": "src/components/inbox/ContactPanel.tsx",
+      "sha256": "b6bbcb7991b1525b71e6e03d3b2e3ba5e18e85f5c03cec8a33a336ed8e72edda"
+    },
+    {
+      "path": "src/components/inbox/ContactTagsEditor.tsx",
+      "sha256": "d7c481288636c24f019c63c2c86b0d816095196095e78a6e424afd7cd0545731"
+    },
+    {
+      "path": "src/components/inbox/ConversationList.tsx",
+      "sha256": "513d4f1b1449457f14082858c99620d4dc823a3b8800fb38ac54c29055c6ccb8"
+    },
+    {
+      "path": "src/components/inbox/CustomFieldsEditor.tsx",
+      "sha256": "ce944fea1aeebb5bce56fd9cafb7aa4a6b70548a903fd3f17cb2d913f80da5ba"
+    },
+    {
+      "path": "src/components/inbox/InboxFilters.tsx",
+      "sha256": "7d70f6d3ccfc31783d67ac257aa31caeabee698223e628f7411aa38175ef4de0"
+    },
+    {
+      "path": "src/components/inbox/MessageInput.tsx",
+      "sha256": "5b57e4f3974486a24e601b294d7f938885f88f2df51c9e449431925b5eec7108"
+    },
+    {
+      "path": "src/components/inbox/MessageThread.tsx",
+      "sha256": "ff13db5b3e70eacc08dd63f99d083da81ad97f26b53312033b64bf5c0acbd815"
+    },
+    {
+      "path": "src/components/inbox/TemplateRestartDialog.tsx",
+      "sha256": "473bb9f905379b7d6b2519de983a53860492c81172a38cd3c9e3afda280556d2"
+    },
+    {
+      "path": "src/components/inbox/inbox-filters.ts",
+      "sha256": "76c764174e234857eead649f973dad86356701127f6c4b04ef59834ed9450e14"
+    },
+    {
+      "path": "src/components/origin/OriginBadge.tsx",
+      "sha256": "6d9fc0a95b0cdd5116449fd180e0e83a1aa2cd59d9ac525ca1cfc60d07bcaf87"
+    },
+    {
+      "path": "src/components/origin/OriginBlock.tsx",
+      "sha256": "aaf495e590ef84c4dd827686827e2db4545d5df304f6ac40b121ae70c57cf7a8"
+    },
+    {
+      "path": "src/components/setup/WhatsAppProviderCards.tsx",
+      "sha256": "a99aadec0114b692e7981e87de0827d80ceca3e456ddc2a16ae84e8dedf1d613"
+    },
+    {
+      "path": "src/components/templates/TemplateFormDialog.tsx",
+      "sha256": "5c90db86c8ab646fd56c6fd3a73e984396d94093f62d56257233a734eeeb0a43"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "sha256": "837551a42dab4f9e0f0ae3d97baddb1240778702c1bba09ccafa527e815452ba"
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "sha256": "15eec879292103c189d44b9625d59ba11549f45b6fc00c71b982d49a14f5da02"
+    },
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "sha256": "a36defaf8d1f6065ad0ce791a5266d858f3de082d5d718d754cc93992d62e3fd"
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "sha256": "5f5e0d26000ecbb2880a2099dc506c89a4a6a2d9d55ef0fa93c1a9b91d4f513a"
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "sha256": "82a1008ac5bb2182bd5d0a67d3f2c0a73cab03b34b4a08c4acac6e7d21b4899a"
+    },
+    {
+      "path": "src/components/ui/sonner.tsx",
+      "sha256": "0e571f500f01cf50a9dadf35b6ef78b52bf7f98b811fbb8412131f8f7267c49f"
+    },
+    {
+      "path": "src/customizations/README.md",
+      "sha256": "03ac5896966a27525451cc25fcb21248e864de55504c92d5d6d4f3f56a116e13"
+    },
+    {
+      "path": "src/hooks/useCampaigns.ts",
+      "sha256": "59b95b327cc832b05230e62ba48666d5f61e63dbc50ecb19ce02b1ff0ab77868"
+    },
+    {
+      "path": "src/hooks/useContactChannelLinks.ts",
+      "sha256": "beef3e0bd063d9b0f92ce787e2502086afeed9015057274511a4b4be314713a1"
+    },
+    {
+      "path": "src/hooks/useContactDeals.ts",
+      "sha256": "c211ca22650eae31c69ceeb040d5f92097d78b6855417da55815df28464cbbed"
+    },
+    {
+      "path": "src/hooks/useContactProfile.ts",
+      "sha256": "b53ef7d3fe3c9192564cceba6059bc9dc819c3dc24aec15f1b71b493588e4736"
+    },
+    {
+      "path": "src/hooks/useContactTimeline.ts",
+      "sha256": "34782423e2cb552059f05b5496d9cd464706c04931172d1903264332c695b8dd"
+    },
+    {
+      "path": "src/hooks/useContacts.ts",
+      "sha256": "3a2e5b8229892f3193fdf8bb3988c6075cda39c09192195d8ca7fbdc2b8fb8f7"
+    },
+    {
+      "path": "src/hooks/useConversations.ts",
+      "sha256": "782f25d7c00dd2edd57fcb7f3360b1dfdb678de6b036059b2654485131cfbdca"
+    },
+    {
+      "path": "src/hooks/useDashboardMetrics.ts",
+      "sha256": "9de04f656144061ed86e11c9b23eea0743cd33c63f0377d38be1a1d6e2231f87"
+    },
+    {
+      "path": "src/hooks/useDashboardPrefs.ts",
+      "sha256": "f43411bbd0be4fa5a3e0f5bbbee8e27b9bb524217439c9e6a3515f79dc98abb9"
+    },
+    {
+      "path": "src/hooks/useDealDetail.ts",
+      "sha256": "181c115cac539658d11f105208cd1732a8b162fd1f8f35f1bcd4ceccd505879d"
+    },
+    {
+      "path": "src/hooks/useForecast.ts",
+      "sha256": "c3f42e275298ad53de7236dd284e80cbc3df2a4b1eb19d75b35449ab65488746"
+    },
+    {
+      "path": "src/hooks/useMessages.ts",
+      "sha256": "e85a6366619cee24f4d065876edaa13fb3908265f841cd838f51a0125f73c5a5"
+    },
+    {
+      "path": "src/hooks/useNextActions.ts",
+      "sha256": "1ba05bfd79f941082b1343197ee04764c45ac20e0ca0c6d5af664a77a24c3224"
+    },
+    {
+      "path": "src/hooks/useNotifications.ts",
+      "sha256": "23b5e8518dba0b0deae8e45cf16d6ab9bd977dff7fa32202d3a6a97dc4bb5797"
+    },
+    {
+      "path": "src/hooks/useNumberStatus.ts",
+      "sha256": "7d43c40623b0f84c09acfe920e81dc8ad190a0eb86426504274a2306d7b082ea"
+    },
+    {
+      "path": "src/hooks/useOperators.ts",
+      "sha256": "1bb7697dccd1745bf8cb511042c91cd2e54076793124afe4f8cc531787d23d61"
+    },
+    {
+      "path": "src/hooks/usePipeline.ts",
+      "sha256": "68d6626191e8cec3b4f664177b5d885d9b0a760de8e28bae090537a21dd56e98"
+    },
+    {
+      "path": "src/hooks/useSalesDashboard.ts",
+      "sha256": "e6c9f5c0d169e79c27ff3e3fa5d55a12c9546635ce633d31ffa97086034ff52b"
+    },
+    {
+      "path": "src/hooks/useSupabase.ts",
+      "sha256": "03de8761264b58978bb370d6e5d1dd1b9c7664145bb5180349e6f3ba7dfe8cf9"
+    },
+    {
+      "path": "src/hooks/useTags.ts",
+      "sha256": "1e9a3433f149936f8b0ac7b05cc1ceec73487dfa3c8b56305f27197746de3851"
+    },
+    {
+      "path": "src/hooks/useTemplates.ts",
+      "sha256": "967e93550757b323b7c071dd5f5cf937a23545c6811529970e4441b9dc25db57"
+    },
+    {
+      "path": "src/hooks/useUtmLinks.ts",
+      "sha256": "b629c302fd074fb000d8a36360538d12e558d5c3a0429c7f94583f92ffcbf926"
+    },
+    {
+      "path": "src/lib/admin-auth.ts",
+      "sha256": "3fccfbb9ab6de1e6ea4216b1191645ce54e81def658059ab2afdea27345fbcb5"
+    },
+    {
+      "path": "src/lib/constants.ts",
+      "sha256": "ae17108da22db008f8b54a4b86116a5841042914c3424fb852a9e9a8507c19a3"
+    },
+    {
+      "path": "src/lib/credentials.ts",
+      "sha256": "0c491bf0f6d921e45229f0f7ea3832ba30495a0fe2e6a713cfe954b14c503409"
+    },
+    {
+      "path": "src/lib/dashboard.ts",
+      "sha256": "2de3eb2751fc191367054ce06d8598d833eddddbeb5e9a9f2aed390f044f8cad"
+    },
+    {
+      "path": "src/lib/dealOrigin.ts",
+      "sha256": "97d1bb77ca0dbf2743ec78dfc61a61810a3a48ccb72a855e7769c1f020fdb655"
+    },
+    {
+      "path": "src/lib/nextAction.ts",
+      "sha256": "39f1b383e644116cacc0d4f8b3ea8a97b34ceea2ac00a2a45c2a01e7b4e76fbd"
+    },
+    {
+      "path": "src/lib/phone.ts",
+      "sha256": "5acfd8497a2b879ce9ed862ea04de91e8e100324d834cbda89d99c866b1dfcc5"
+    },
+    {
+      "path": "src/lib/soundPrefs.ts",
+      "sha256": "fe606acb91da09eb4ae0d77df8141de0dd7332311511fc5636add3fc841bc883"
+    },
+    {
+      "path": "src/lib/supabase.ts",
+      "sha256": "ba11610cbfeb799f34f0ae4bfb25ce6bfd01a725755a86169b76135a93d2d40d"
+    },
+    {
+      "path": "src/lib/uazapi-webhook.ts",
+      "sha256": "6071726f69dbfee6e47e4bc7006ab92c7ea4cc2e4efb775f20a831668e88fd9a"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "9304a861c8673bee09e0f12de31773abbde503b02e59dfd74763ddec2e37cf05"
+    },
+    {
+      "path": "src/lib/utm.ts",
+      "sha256": "548f94b4c188e0d3bfda5e67d5f9eb9b5f8efce1f2d1263a3019a2b02386f763"
+    },
+    {
+      "path": "src/lib/zernio.ts",
+      "sha256": "2da712dada743d1d0efc3f19c54463e2f24fa9407765bc55d1aeb31b8dfc027b"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "cd86f01058b05e2cf1e4dde4b796d419e8fe6b503217ea18b7b871eae278e644"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "sha256": "2040a9405bc48322b728b88e126c13f6bc4a4f51b47d34e4eb51dd39c9a716e2"
+    },
+    {
+      "path": "src/types/campaigns.ts",
+      "sha256": "e785abfc6a43722b7ba64fc7bd54a1eb924ddd9b6b16ea46b54a573af53aa1ec"
+    },
+    {
+      "path": "src/types/crm.ts",
+      "sha256": "2e4014691ff6e8ddae0f52b1277c4ec6a4f376c31e7cc1617d71f0bcb310794d"
+    },
+    {
+      "path": "src/types/db.ts",
+      "sha256": "9bf999cbb16b020106ab1e894b1f99ea54fdb4ff1181c225c2bd6c9b756e2034"
+    },
+    {
+      "path": "src/types/inbox.ts",
+      "sha256": "8d8e2b9a29a8568f4af9617f79fc2ecb3ed266260d6fe321cfd8c7c902341462"
+    },
+    {
+      "path": "src/types/knowledge.ts",
+      "sha256": "a9eb67fb2df63df181522d9c1317f85e762cd1635772c0f613c1f828265ba248"
+    },
+    {
+      "path": "src/types/templates.ts",
+      "sha256": "f5156cf97de788c7a0eccc394d8aa0d0421b6724a21227e80cea1b2f0912d1e4"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "supabase/config.toml",
+      "sha256": "c2419a5a728abb1dc0945e474c5898d84d9178b119fd4f5840b8bbc698f13806"
+    },
+    {
+      "path": "supabase/functions/_shared/auth.ts",
+      "sha256": "6f6894e5d9eebffcdac669c2c052216375cebae90e1ef8d8ce579fa4d115571a"
+    },
+    {
+      "path": "supabase/functions/_shared/channel-sync.ts",
+      "sha256": "e895e06b0eb40989f23b6b5c5b6d7f17c89396bdf9883b37e1849191c86d6c32"
+    },
+    {
+      "path": "supabase/functions/_shared/cors.ts",
+      "sha256": "5f4c9fda9dbcbcb1500cc0328d2b17e4c12ba8a6c00c6a9f515792365bdb526d"
+    },
+    {
+      "path": "supabase/functions/_shared/credentials.ts",
+      "sha256": "71ce682cd8e090d771aef9620ae0f1c6ed1640c59c41d972d3eca8e26bdf1cf4"
+    },
+    {
+      "path": "supabase/functions/_shared/supabase-admin.ts",
+      "sha256": "546e0b08e659bcd70a021cd9da8c40ffebf640b13dd9f405397f30b1bf34f703"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/index.ts",
+      "sha256": "1b4978c5ebc9aaf78dac9766a7cc07621967f15b56869ecbfd1a1155750dcc39"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/media.ts",
+      "sha256": "5de4ff4fc0fc81a463b1c00b3195870cb17c9346bffc48c7ce8bb50b161ddb6c"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/outbound.ts",
+      "sha256": "2edd20123e3ab91b576e5629d7ec6c9186fa1aa118858502dbfb7cdf44cd50fb"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/types.ts",
+      "sha256": "d15a462b6f254b74628e42ee28e2ee5f94cb6ca5b00fe02b85c75448853fd80f"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/uazapi-provider.ts",
+      "sha256": "a179e80805d2e2d30a6d55d20f5d982db876cb1b6530310e74d0f14af8b8c753"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/zernio-media.ts",
+      "sha256": "898c40f82e1139f685ff26953970d2d7c0b55683563b24c13c7d3ed3b5726be6"
+    },
+    {
+      "path": "supabase/functions/_shared/whatsapp/zernio-provider.ts",
+      "sha256": "36da780452ddf02dbb1fae87aae59d1e46fff201519d3e71a92c46a5f198d6b0"
+    },
+    {
+      "path": "supabase/functions/_shared/zernio.ts",
+      "sha256": "4df66761194ea3e435c2334d411510644ad224818222d79da63144ca86c832da"
+    },
+    {
+      "path": "supabase/functions/delete-team-member/index.ts",
+      "sha256": "076d82a611cac09bcffa9da66947565a644ea3842a75e8b008628af8170baafd"
+    },
+    {
+      "path": "supabase/functions/dispatch-campaign/index.ts",
+      "sha256": "bd19d0c9ec49d8d210e76092ab08bdba6612632027178763a7aeeb2027ada4fc"
+    },
+    {
+      "path": "supabase/functions/grupozap-leads/index.ts",
+      "sha256": "717d93481e2682f549ef049a616af1c786e157f9197add64344d4894aa8600c1"
+    },
+    {
+      "path": "supabase/functions/ingest-lead/index.ts",
+      "sha256": "9ae111d095386e4f219ea1cca9aa0027385c6941ba44e980b929ea69c552038e"
+    },
+    {
+      "path": "supabase/functions/invite-team-member/index.ts",
+      "sha256": "e37710a61f797f7827e640fec0f9608b5989e24c95d81f05d8376c12981439c6"
+    },
+    {
+      "path": "supabase/functions/redirect-tracker/index.ts",
+      "sha256": "e9fbbc52c21444acece23b120cbd2eed25c75c28b39d17270df84b7ff6c0dfc3"
+    },
+    {
+      "path": "supabase/functions/send-operator-media/index.ts",
+      "sha256": "b4d307069d5181c3c2f800eda3df9acc3937d899926f49ea31bd5548e2a23169"
+    },
+    {
+      "path": "supabase/functions/send-operator-message/index.ts",
+      "sha256": "765dfe1be4e05f96549c5ce21b48b86bc95e67f07cf1942ffa6f3ffcaf857100"
+    },
+    {
+      "path": "supabase/functions/send-operator-template/index.ts",
+      "sha256": "9f6ba6ce7930be431a0b6e71680f35153e81d1d7538b242b7e3c15cab55cacfa"
+    },
+    {
+      "path": "supabase/functions/simulate-inbound/index.ts",
+      "sha256": "4b9a081ef2d33f7247cfbe80923107ae86483cfd1b31bdcf5a076868ff8c8da2"
+    },
+    {
+      "path": "supabase/functions/submit-template/index.ts",
+      "sha256": "88e7cefa792f0e964934d38e39aa42b4dcfef248817530acf2a4071213fb0d60"
+    },
+    {
+      "path": "supabase/functions/sync-broadcast-status/index.ts",
+      "sha256": "27dfce45915fe8ccd64bcb3bd23fe9ac540a5526b45d3487ce67c3f985ae00ec"
+    },
+    {
+      "path": "supabase/functions/sync-template-status/index.ts",
+      "sha256": "6310da5640bb6bd1fcda22f160288312df5feb9b659002b5c07de6c33fe23d79"
+    },
+    {
+      "path": "supabase/functions/sync-whatsapp-channels/index.ts",
+      "sha256": "8c3943f7bdaaf3cf3e02819226ae1670acda6314c294181c6417e46e2e710a1d"
+    },
+    {
+      "path": "supabase/functions/test-zernio-connection/index.ts",
+      "sha256": "2f391da1fb3ed3eb55f1ee37cc61e5986471f9b1ec64b57cf4a82d68d39aca04"
+    },
+    {
+      "path": "supabase/functions/whatsapp-inbound/index.ts",
+      "sha256": "787f8d977e4f12520911ad209f7127798619f043471483460a2f1c3ff9af2be4"
+    },
+    {
+      "path": "supabase/functions/zernio-number-status/index.ts",
+      "sha256": "3b2190236929eea4e2d82f3120bdf660a456323967568f9b4db886557583b030"
+    },
+    {
+      "path": "supabase/functions/zernio-webhook/index.ts",
+      "sha256": "3551afab62fd2f134365683d2afbef0f2e0ddd61acfe0c2abad36876338393c3"
+    },
+    {
+      "path": "supabase/migrations/20260422120001_init.sql",
+      "sha256": "dbec94948250399d5b21f1040d22bf4eb6f9500bf7a9ba52e527685b14c2271d"
+    },
+    {
+      "path": "supabase/migrations/20260422120002_tenants.sql",
+      "sha256": "52fdc9776eeafa8c32420ec24959bc9386dcaa1d75f3df0ab689f31d8a3cee36"
+    },
+    {
+      "path": "supabase/migrations/20260422120003_contacts_and_tags.sql",
+      "sha256": "e8270f43ac3118db3b18a577b370da26faa3fcac355e37604559b528a3c4c5b5"
+    },
+    {
+      "path": "supabase/migrations/20260422120004_templates.sql",
+      "sha256": "4d344ec1a56d4df1711a1b85366d8ea961a1d8e5acf241b11c542f3b93b7b23d"
+    },
+    {
+      "path": "supabase/migrations/20260422120005_campaigns.sql",
+      "sha256": "22de2eecd865a6696c9d3f551ae86954e3c98bdb126cac9831398ef8f8cfd556"
+    },
+    {
+      "path": "supabase/migrations/20260422120006_conversations.sql",
+      "sha256": "7c51542fd1a299a4dd707f50230e4783b60d87bb024c572ac106f59de49cec60"
+    },
+    {
+      "path": "supabase/migrations/20260422120007_knowledge_and_ai.sql",
+      "sha256": "ae838ce3c43f31da005074d32d00159e2b67630b00fa385471e672d646bcba21"
+    },
+    {
+      "path": "supabase/migrations/20260422120008_notifications.sql",
+      "sha256": "70d677a616cc90f28d1288186082fa04615a788e79ca72f0948540e48667f95a"
+    },
+    {
+      "path": "supabase/migrations/20260422120009_indexes.sql",
+      "sha256": "c625a08affad84c42f7f908744cea4f357c06c908532e316f179e13b3bee1a24"
+    },
+    {
+      "path": "supabase/migrations/20260422120010_rls_policies.sql",
+      "sha256": "80b866b8a21c065405d40caadfd10b55028c50a1aae4f8d3d66dad2e5eb65c84"
+    },
+    {
+      "path": "supabase/migrations/20260422120011_realtime.sql",
+      "sha256": "df605737bcf5b5182eb845b1bbbb19981f8d8f8d651042098b78a82ba3ad3118"
+    },
+    {
+      "path": "supabase/migrations/20260422120012_vault_encryption_key.sql",
+      "sha256": "cb9ebc8312dbd33556d58eca2049d5983925afeca4d74d1f0ec18b57e73ea135"
+    },
+    {
+      "path": "supabase/migrations/20260422120013_fix_encrypt_search_path.sql",
+      "sha256": "834743e1961618528e0bc507a9ce524e2ea230302ffa4cb5e76d564abb25f9f9"
+    },
+    {
+      "path": "supabase/migrations/20260422120014_grant_usage_to_anon.sql",
+      "sha256": "4846cedbdac7e24c7b64490dd17e410a0c479f06950f809fcd23acced3787377"
+    },
+    {
+      "path": "supabase/migrations/20260422120015_on_auth_user_created.sql",
+      "sha256": "c7d4960d5f94b624a9b73abee3e1357ddce3078e59c77eb9bc7d1ffa3edae254"
+    },
+    {
+      "path": "supabase/migrations/20260422120016_support_invited_signups.sql",
+      "sha256": "8390fbee98b26792d5ff4292617d20fa7125678db074c44b3830460104d093e3"
+    },
+    {
+      "path": "supabase/migrations/20260422120017_storage_logos_bucket.sql",
+      "sha256": "6fd83e7f656c8b208652129b9c40e702fab825c018a1e6cac2355e0ed55a42bc"
+    },
+    {
+      "path": "supabase/migrations/20260422120018_cron_template_status.sql",
+      "sha256": "8c1cbe5c5a0f839f3a6ecb90f3d1a01efcfca885e06bdf461fda25bf6bbc7fdf"
+    },
+    {
+      "path": "supabase/migrations/20260422120019_dispatch_and_followup_cron.sql",
+      "sha256": "ba559a08a12e9c5cbc5923a9bc691cd1a9377d322aab66e6eab075a924e70cdb"
+    },
+    {
+      "path": "supabase/migrations/20260422120020_ai_message_trigger.sql",
+      "sha256": "89f0a9aba9ea3e91c0ef0acacecb72bd573e43a97f1dc47c4fd8139e744edba1"
+    },
+    {
+      "path": "supabase/migrations/20260422120021_knowledge_search_rpc.sql",
+      "sha256": "4474d382ec53a365115ccd601e06321a2e380c8ad1d3533b53e27647773542ae"
+    },
+    {
+      "path": "supabase/migrations/20260422120022_audio_trigger.sql",
+      "sha256": "5efd3edad02ec712dd077f791b6215ede56377372cfdfdc4defbf0a194263df9"
+    },
+    {
+      "path": "supabase/migrations/20260422120023_knowledge_bucket.sql",
+      "sha256": "19b110b3c67952e7e76c69a48d50e186a4f7b5adad25187b348dd40aea76dfd1"
+    },
+    {
+      "path": "supabase/migrations/20260422120024_notification_triggers.sql",
+      "sha256": "8dca8fa1a0478c9ae4ca35ba3809bbbdcfe33f9e9a66316f2bb5fd5142e777c2"
+    },
+    {
+      "path": "supabase/migrations/20260430120001_drop_super_admin.sql",
+      "sha256": "39c264b5fcf0d1abcab234289ddcea45fca737268782c786f86022553c3e6754"
+    },
+    {
+      "path": "supabase/migrations/20260430120002_drop_multitenant.sql",
+      "sha256": "4b96013109db0c0f2c065d3169ad60627f456c4b7619440d6b936d9d25def789"
+    },
+    {
+      "path": "supabase/migrations/20260430120003_drop_onboarding.sql",
+      "sha256": "2cae390a3dda696bf96c645840354643af0285bf384e4ab81e2dff0ae045a1dc"
+    },
+    {
+      "path": "supabase/migrations/20260505032556_invites_and_owner_role.sql",
+      "sha256": "215778f1c88c88d6b9df4e790ff13a4baa7000d5a7dfd4bddcd4c114780bbb5e"
+    },
+    {
+      "path": "supabase/migrations/20260521180500_setup_infra.sql",
+      "sha256": "90fe8315937a04968353de07b2035d0d4a63aa66da16233ba65d70f0ba980ed7"
+    },
+    {
+      "path": "supabase/migrations/20260610120000_dispatch_webhook_hardening.sql",
+      "sha256": "01c5b59c652f400172f2121b4e19a5fe64985081bfbc4495ab1e0d6751489570"
+    },
+    {
+      "path": "supabase/migrations/20260610130000_messages_wamid_dedup.sql",
+      "sha256": "b79f929a317914ccf239a0bebaab2e50dd0d3af1951da069a20e830b10eed01a"
+    },
+    {
+      "path": "supabase/migrations/20260623120000_zernio_schema.sql",
+      "sha256": "c18920d35d77b6565013f143e23d9dbfc4e504f2df7020be665a3eb6d43d0950"
+    },
+    {
+      "path": "supabase/migrations/20260623123000_zernio_data_cleanup.sql",
+      "sha256": "18ab152e1ba5dc0ef4d00930a239d3ebc2b6a12b0f6cd78cd23e5a62aaa802fe"
+    },
+    {
+      "path": "supabase/migrations/20260623130000_native_invites.sql",
+      "sha256": "eebffeb89cfd294ec3267f350a8a37d05c19edaff1ab36e3ad8b765146b6a33f"
+    },
+    {
+      "path": "supabase/migrations/20260624120000_expose_postgrest_schema.sql",
+      "sha256": "597d384c5c41736c735f13949e4a5b4aa2ee42d2600567a0113748490df4f7aa"
+    },
+    {
+      "path": "supabase/migrations/20260624130000_ai_agent_v2.sql",
+      "sha256": "5242f3504b5cf453b930a26b04831e33704b25343531c1ca6f96aa7e969e59db"
+    },
+    {
+      "path": "supabase/migrations/20260624140000_agent_media_bucket.sql",
+      "sha256": "0c541dd9d61f7d008fbd3de0e1a8c74536e9fa91d25b51c285bec6f7c6330709"
+    },
+    {
+      "path": "supabase/migrations/20260624150000_verify_service_token.sql",
+      "sha256": "05f3365c4ef9d22aedab69a33bb4ed22d5ddcc41853263c00bf27fe3c0e4ca5d"
+    },
+    {
+      "path": "supabase/migrations/20260625120000_inbox_operator_tools.sql",
+      "sha256": "e35d6178a9dbd5d35d567cf9a03423a083a648ad22e1dc0c5b5eaaa262481ddb"
+    },
+    {
+      "path": "supabase/migrations/20260625130000_conversation_archive.sql",
+      "sha256": "e813b18e31c8ead7775f679c1888763b54db22fc3274ccfefa63ce8f6d62d542"
+    },
+    {
+      "path": "supabase/migrations/20260625140000_sync_broadcast_status_cron.sql",
+      "sha256": "5403c7add04f9ab9a2fa27ba8116acd34151c2f54fd2b0239d6f2e73b4749085"
+    },
+    {
+      "path": "supabase/migrations/20260630120000_crm_layer.sql",
+      "sha256": "78182956b79e960ed1f80bf6e20409403b1ee3989cc020c5c131877801abd736"
+    },
+    {
+      "path": "supabase/migrations/20260711120000_crm_custom_fields_and_contact_source.sql",
+      "sha256": "681c613a997fc8e74de2b0a6aaed1577b1d60bd52271c9ae54089fb429881f95"
+    },
+    {
+      "path": "supabase/migrations/20260711130000_omnichannel_instagram_channel.sql",
+      "sha256": "9bbe64666d234f663efc91aaf7d414c5303bc07f123216011327e01cb4a5f6ce"
+    },
+    {
+      "path": "supabase/migrations/20260711140000_sales_and_repurchase.sql",
+      "sha256": "38ce722fc6c06bd253588b7990daf8e1e1c3b79cdfac269608049566c99b2f37"
+    },
+    {
+      "path": "supabase/migrations/20260711141000_repurchase_functions_and_cron.sql",
+      "sha256": "3fe4e782e0730782deed23e067a2b4961b8b7b513110cc2ffd0e6b4201f78623"
+    },
+    {
+      "path": "supabase/migrations/20260711150000_repurchase_dispatch_cron.sql",
+      "sha256": "06fb2339e7104ced79adba98ba594615dda0e281eda8efa2b73e7fef1c2bec73"
+    },
+    {
+      "path": "supabase/migrations/20260711160000_custom_pipelines_and_lead_fields.sql",
+      "sha256": "353c27f2f6b5cb19220d529b261c4442199f56e11e790f574224ac18eb27a010"
+    },
+    {
+      "path": "supabase/migrations/20260713120000_ai_agent_channel_toggles.sql",
+      "sha256": "090f22c3ba86777d09d3337d76acb13f206b06ec73313a9e65de596ba43862c1"
+    },
+    {
+      "path": "supabase/migrations/20260713130000_utm_tracking.sql",
+      "sha256": "576480e37766637e38816d572cddc84269abfcfc94f1a109809ec89ca694d9b5"
+    },
+    {
+      "path": "supabase/migrations/20260713140000_sales_dashboard.sql",
+      "sha256": "6710ece9b540284f28a9764f29109f78da9c73d88bee2ef0a8faaf8fdd96cea0"
+    },
+    {
+      "path": "supabase/migrations/20260713150000_ai_stage_movement.sql",
+      "sha256": "969cf6c2d2ddf922229f7188320233061326d5af16f1be502d57ed3d999b42bd"
+    },
+    {
+      "path": "supabase/migrations/20260713160000_contacts_enrichment.sql",
+      "sha256": "8279c02d25a7abb2d4613b5321040190aa6fa39e091d07b61773343c3ceb4068"
+    },
+    {
+      "path": "supabase/migrations/20260718120000_lead_tracking_attribution.sql",
+      "sha256": "a9497d910a6b380349b2367444752213a5ce46480c4907bb56fde475895fc078"
+    },
+    {
+      "path": "supabase/migrations/20260718130000_tracking_sessions.sql",
+      "sha256": "a69a71f259485a09468d92b98f4cca999f22334d504eb661c87278839c768df6"
+    },
+    {
+      "path": "supabase/migrations/20260718140000_attribute_inbound_lead.sql",
+      "sha256": "555e87bb005a4985533d4b3b33ea5ae267cf10801c7826c96a681d3018dfaa9b"
+    },
+    {
+      "path": "supabase/migrations/20260718150000_ingest_landing_lead.sql",
+      "sha256": "a7671e825c4393b51320158380951d7a1cde19bbd1016c408acaad2c60709a08"
+    },
+    {
+      "path": "supabase/migrations/20260720120000_stage_probability_defaults.sql",
+      "sha256": "4701e14fbfa034844438c4f11a7819bbcabab6ed9f1cb203a282165992d8c10e"
+    },
+    {
+      "path": "supabase/migrations/20260720130000_products_type_quantity.sql",
+      "sha256": "2bb0687b1da2dbc482ec1fda2ebc1a82dc621b0acbe6b1bf1cd8f0eb6eab1f0d"
+    },
+    {
+      "path": "supabase/migrations/20260720140000_attribute_instagram_provider.sql",
+      "sha256": "d1899483542d6049edccbec1c81b38b8843b130846eda65100ae59bd9540825f"
+    },
+    {
+      "path": "supabase/migrations/20260720160000_contact_kind_and_won_import.sql",
+      "sha256": "77fd902ffe6cef4adb96ad98333d59dacc41d9ff644704e63395bfe4545fba3d"
+    },
+    {
+      "path": "supabase/migrations/20260720170000_won_to_sales_trigger_demo_mode.sql",
+      "sha256": "7475005744d82f36622a871f1b871c68af2e2558dde0919623562c1032fd42ad"
+    },
+    {
+      "path": "supabase/migrations/20260720180000_won_into_predictions.sql",
+      "sha256": "76e1c4a7fac92c77890f47d4f03ab968b07b17509ba185ac29f1d620ea214847"
+    },
+    {
+      "path": "supabase/migrations/20260721120000_conversation_active_deal.sql",
+      "sha256": "eb11faeeedac97ae20d9105ac39965219c15f05329b5744f19ebe9814b279f81"
+    },
+    {
+      "path": "supabase/migrations/20260721130000_lead_auto_assignment.sql",
+      "sha256": "216f2b5c6e6aa14ddb70da01908b916e226fcbf7f030097e31eb133a33cb4be1"
+    },
+    {
+      "path": "supabase/migrations/20260721140000_activity_done_at.sql",
+      "sha256": "1d1f5231bb3cd2e8b308b5a34e905f1b57937694a22e91f9222e902b98895d70"
+    },
+    {
+      "path": "supabase/migrations/20260721150000_unwon_cleanup_predictions.sql",
+      "sha256": "38d4af410d744803f3e608acaceba967fa957d8475cf27635131ca6bb316e55b"
+    },
+    {
+      "path": "supabase/migrations/20260826120000_grupozap_portal_leads.sql",
+      "sha256": "077e37bae31783b4f89871127f9b83e444083395e20422abefa46705add9b524"
+    },
+    {
+      "path": "supabase/migrations/20260910170000_uazapi_inbox_atomic.sql",
+      "sha256": "45ee2b53a0965973ca47e81dc91dfaea0ecb5534ebacd7a75e4c2062566408cc"
+    },
+    {
+      "path": "supabase/migrations/20260915120000_student_edition.sql",
+      "sha256": "eb5f57f85e7eaa9fe75e708b95ad9b951fb7ea7480c91fc222b6e8bc7ca0ba3d"
+    },
+    {
+      "path": "supabase/migrations/20260915140000_whatsapp_channels.sql",
+      "sha256": "da04111acbc6129dfe87f9ae0a502a2c39c56cdaee36bfaa92df3138a8c1bdb1"
+    },
+    {
+      "path": "supabase/migrations/20260915160000_remove_ai.sql",
+      "sha256": "bedc6fc6c7efe68a48bc8496d922774e670a5565473e793880300de7817ea4e1"
+    },
+    {
+      "path": "supabase/migrations/20260915170000_operator_names.sql",
+      "sha256": "060663bed9133d1e8fc6114ea9b2606511c366685fe3827375ad4c3b24e8b264"
+    },
+    {
+      "path": "tests/distribution/no-ai.test.mjs",
+      "sha256": "4075371a2fb7bbc9dbd8a1fd763649f729fddb5a99dfc3b96836294dfc709170"
+    },
+    {
+      "path": "tests/distribution/package.test.mjs",
+      "sha256": "abf3a9987b76669fc3faa9a6746a68236c718924611629227cb4539e5bca2445"
+    },
+    {
+      "path": "tests/edge/zernio-media.test.ts",
+      "sha256": "082ba6b03b0d027a92b32dfa8abe723c9991bf0aa24be25198b108ec58442c63"
+    },
+    {
+      "path": "tests/helpers.ts",
+      "sha256": "cd61f769a324c0559eefc7ea56acce10270f3988fe7721dad92084f34d538727"
+    },
+    {
+      "path": "tests/integrations/channels.test.ts",
+      "sha256": "7e7cd42c71733813c67c03aaf6f68e7365ae9a3af6f87cd58576fa3004fd1eee"
+    },
+    {
+      "path": "tests/integrations/media.test.ts",
+      "sha256": "d04d45abf61040ff4a76b4be42dd8ddca333918959cd30925395e6ac9c7f13f8"
+    },
+    {
+      "path": "tests/integrations/uazapi-inbox.sql",
+      "sha256": "30bc2e192b6b3175363c2064ac7260169086ba3210f4c836fa0cf2f386f21ce8"
+    },
+    {
+      "path": "tests/integrations/uazapi.test.ts",
+      "sha256": "baa2b6507f33524dd1b3a8e4edf95cf223713e148ffc6dfc2b69e128244a5ff0"
+    },
+    {
+      "path": "tests/shim-plugin.ts",
+      "sha256": "97565426a84150603a63dd5bfaf331170c679663c94b81775a91970fdb9d6a8b"
+    },
+    {
+      "path": "tests/specs/00-smoke.spec.ts",
+      "sha256": "99a2f743e70246dc0b6d7818056275ead081df3af1130d8f1b76c34b88f2b75a"
+    },
+    {
+      "path": "tests/specs/01-navigation.spec.ts",
+      "sha256": "37fc2a1754940e4d2c355054d606712ebf6447e033204fd7bcb90cfad84121b7"
+    },
+    {
+      "path": "tests/specs/02-validation-core.spec.ts",
+      "sha256": "512beb8b29e59ff97a281eb4d4f5bddf1ad9b3ef2f4445bf128e3ee2e123a30a"
+    },
+    {
+      "path": "tests/specs/03-validation-meta.spec.ts",
+      "sha256": "c3dfbb9be1d78e575fe0bef627c21f79acce2613d13388b415309ae1e3563c03"
+    },
+    {
+      "path": "tests/specs/04-states.spec.ts",
+      "sha256": "9cf9d1314ce8e79e65ecbb08ca79a75799a01b350326ac66254112c669699c31"
+    },
+    {
+      "path": "tests/specs/05-idempotency.spec.ts",
+      "sha256": "29b1568193c59e8c4559ca7412ee33e866d516191d7215d45319a11c094dc796"
+    },
+    {
+      "path": "tests/specs/06-visual.spec.ts",
+      "sha256": "ede874186b315fbfde914fb8c8fe8d09b05bf58e58cead98ae2ec4f27d32eabd"
+    },
+    {
+      "path": "tests/specs/07-responsive.spec.ts",
+      "sha256": "b5f06b9024f5f1ce3899c9e0e26f6e11ed09dee6092c821b95a20a6bb2956ad0"
+    },
+    {
+      "path": "tests/specs/08-timing.spec.ts",
+      "sha256": "537145079c42c289108445c83a87baf8f7caff01f7f3e7472ab64f8a35c14413"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "sha256": "7be841111dee3ad940a45dd669f0edc9dda5c03e4f0f9ede25f0ff45540f746d"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "sha256": "ef550844e0cbaee29d278f11e88fe9c5a47b4e51b71f161790eb35946903989f"
+    },
+    {
+      "path": "validate-sql.mjs",
+      "sha256": "e26852c020dfa013ca86279be7d5513502f88545e89ae1d98add9562a027012b"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "1d1c93b58f7fb8ed0065d648680efadb8a198c164743e89646795a78f89f60dd"
+    },
+    {
+      "path": "vite.config.demo.ts",
+      "sha256": "c566a878b4184ee7d09685e7e6d2f3a4ef01199fa9328372c6645d53b6614c1a"
+    },
+    {
+      "path": "vite.config.test.ts",
+      "sha256": "3121c57c966fa35f87053eae4cea6e3ddfd2cc1a17cb8428c3f1ca8b7fbdab9c"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "866b780aab9c26dd41e7b58eca6307956fb5ab76cb2be4be66ce41d23f9cb70f"
+    }
+  ],
+  "excluded": [
+    "Git",
+    "local credentials",
+    "deployment links",
+    "builds",
+    "private notes"
+  ],
+  "scan": "No known local values or recognized secret signatures found"
+}
