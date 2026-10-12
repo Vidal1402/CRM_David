@@ -5,4 +5,5 @@ export const APP_SCHEMA = 'whatsapp_hub' as const;
 export const STORAGE_KEYS = {
   supabaseUrl: 'supabase_url',
   supabaseAnonKey: 'supabase_anon_key',
+  setupChecklistDismissed: 'agentise.setup_checklist.dismissed',
 } as const;

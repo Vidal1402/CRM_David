@@ -13,7 +13,7 @@
 
 import { requireAdmin, AuthError } from '../_shared/auth.ts';
 import { getAuthAdminClient } from '../_shared/supabase-admin.ts';
-import { getCredential } from '../_shared/credentials.ts';
+import { getCredential, setCredential } from '../_shared/credentials.ts';
 import { jsonResponse, preflight } from '../_shared/cors.ts';
 
 type Role = 'admin' | 'operator';
@@ -47,17 +47,21 @@ Deno.serve(async (req) => {
 
     const admin = getAuthAdminClient();
 
-    // redirectTo aponta o link do e-mail de convite (gerado pelo Supabase) para
-    // a tela /invite, onde o convidado define a senha. Prioridade:
-    //   1. credencial `app_url` (URL de produção registrada no setup);
-    //   2. `app_url` enviado pelo frontend (window.location.origin) — garante
-    //      que o link vá para o domínio real onde o app está rodando (Vercel),
-    //      nunca localhost, mesmo sem a credencial configurada;
-    //   3. sem nada válido: cai no Site URL do projeto Supabase.
-    const isValidAppUrl = (u: string) => /^https:\/\/[^\s/]+\.[^\s/]+/.test(u);
+    // redirectTo aponta o link do e-mail para /invite (definir senha e entrar).
+    // Prioridade: origem de quem convidou (produção) > credencial app_url.
+    // A credencial antiga não pode ganhar se o admin está no domínio certo.
+    const isValidAppUrl = (u: string) =>
+      /^https:\/\/[^\s/]+\.[^\s/]+/.test(u) && !/localhost|127\.0\.0\.1/i.test(u);
     const credUrl = (await getCredential('app_url'))?.replace(/\/$/, '') || '';
     const bodyUrl = (body.app_url ?? '').trim().replace(/\/$/, '');
-    const appUrl = credUrl || (isValidAppUrl(bodyUrl) ? bodyUrl : '');
+    const appUrl = (isValidAppUrl(bodyUrl) ? bodyUrl : '') || (isValidAppUrl(credUrl) ? credUrl : '');
+    if (appUrl && appUrl !== credUrl) {
+      try {
+        await setCredential('app_url', appUrl);
+      } catch (err) {
+        console.error('invite-team-member: failed to persist app_url', err);
+      }
+    }
     const redirectTo = appUrl ? `${appUrl}/invite` : undefined;
 
     const { data, error } = await admin.auth.admin.inviteUserByEmail(email, {

@@ -187,8 +187,9 @@ async function configureAuthUrls(ref: string, pat: string, appUrl: string) {
     method: 'PATCH',
     headers: { Authorization: `Bearer ${pat}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      site_url: appUrl,
-      uri_allow_list: `${appUrl}/**`,
+      // Convite e reset devem cair em /invite (definir senha), nunca no wizard /setup.
+      site_url: `${appUrl}/invite`,
+      uri_allow_list: `${appUrl}/invite,${appUrl}/**`,
     }),
   });
   if (!res.ok) throw new Error(`Falha ao configurar URLs do Auth: ${await res.text()}`);

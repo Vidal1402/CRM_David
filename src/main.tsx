@@ -1,7 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { captureAuthCallback } from './lib/auth-callback';
 import './styles/globals.css';
+
+captureAuthCallback();
 
 // O bootstrap do /setup dispara um redeploy no meio da sessão: os chunks
 // hasheados da versão antiga somem (404) e um lazy-import quebraria a tela.

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Inbox, MessageCircle, Smartphone, User } from 'lucide-react';
 import type { Operator } from '@/hooks/useOperators';
 import { cn } from '@/lib/utils';
@@ -60,6 +61,12 @@ export function ConversationList({
           Conversas aparecem aqui assim que um contato enviar a primeira mensagem
           pelo WhatsApp conectado.
         </div>
+        <Link
+          to="/settings/profile"
+          className="mt-3 inline-block text-xs font-medium text-[var(--accent-primary)] hover:underline"
+        >
+          Conectar número em Credenciais
+        </Link>
       </div>
     );
   }

@@ -24,7 +24,11 @@ import {
   SalesKpiWidget,
 } from '@/components/dashboard/widgets';
 import { LoadErrorBanner } from '@/components/LoadErrorBanner';
+import { SetupChecklist } from '@/components/setup/SetupChecklist';
+import { PlanLocked } from '@/components/plans/PlanLocked';
 import { cn } from '@/lib/utils';
+import { useAppUser } from '@/app/providers/AppUserProvider';
+import { hasPlanFeature } from '@/lib/plans';
 
 const NO_UTM = 'Sem dados de rastreio ainda.';
 
@@ -33,6 +37,7 @@ function isPeriodKey(v: string | null): v is PeriodKey {
 }
 
 export default function DashboardPage() {
+  const { plan } = useAppUser();
   const [params, setParams] = useSearchParams();
   const periodKey: PeriodKey = isPeriodKey(params.get('period')) ? (params.get('period') as PeriodKey) : '30d';
   const customFrom = params.get('from') ?? '';
@@ -76,7 +81,14 @@ export default function DashboardPage() {
     if (id) toast.success('Preferência salva.');
   };
 
-  const show = (key: WidgetKey) => visibleMap[key] !== false;
+  const show = (key: WidgetKey) => {
+    if (visibleMap[key] === false) return false;
+    const origin: WidgetKey[] = ['origem_trafego', 'origem_canal', 'origem_campanha', 'origem_anuncios', 'origem_posts_organicos'];
+    const sales: WidgetKey[] = ['ranking_vendedores', 'forecast', 'tempo_primeira_resposta', 'tempo_conclusao'];
+    if (origin.includes(key) && !hasPlanFeature(plan, 'dashboard_origin')) return false;
+    if (sales.includes(key) && !hasPlanFeature(plan, 'dashboard_sales')) return false;
+    return true;
+  };
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
@@ -92,6 +104,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
+        {hasPlanFeature(plan, 'dashboard_origin') && (
         <button
           type="button"
           onClick={() => setCustomizeOpen((v) => !v)}
@@ -100,7 +113,10 @@ export default function DashboardPage() {
           <SlidersHorizontal className="h-3.5 w-3.5" />
           Personalizar dashboard
         </button>
+        )}
       </div>
+
+      <SetupChecklist />
 
       {/* Filtro de período (global) */}
       <div className="flex flex-wrap items-center gap-2">
@@ -151,6 +167,13 @@ export default function DashboardPage() {
       </div>
 
       {error && <LoadErrorBanner message={error} onRetry={() => void reload()} />}
+
+      {!hasPlanFeature(plan, 'dashboard_sales') && (
+        <PlanLocked feature="dashboard_sales" />
+      )}
+      {hasPlanFeature(plan, 'dashboard_sales') && !hasPlanFeature(plan, 'dashboard_origin') && (
+        <PlanLocked feature="dashboard_origin" />
+      )}
 
       {/* Painel de personalização */}
       {customizeOpen && (

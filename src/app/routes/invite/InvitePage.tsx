@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/app/providers/AuthProvider';
+import { useSupabaseConfig } from '@/hooks/useSupabase';
 import { getSupabase } from '@/lib/supabase';
 
 // ----------------------------------------------------------------------------
@@ -23,6 +24,7 @@ import { getSupabase } from '@/lib/supabase';
 
 export default function InvitePage() {
   const navigate = useNavigate();
+  const { configured } = useSupabaseConfig();
   const { session, loading } = useAuth();
 
   const [password, setPassword] = useState('');
@@ -54,6 +56,23 @@ export default function InvitePage() {
     toast.success('Conta ativada. Bem-vindo!');
     navigate('/dashboard', { replace: true });
   };
+
+  if (!configured) {
+    return (
+      <AuthShell
+        title="Abra o convite no CRM"
+        subtitle="Este endereço não é a instalação configurada."
+      >
+        <p className="text-sm text-[var(--color-text-secondary)]">
+          Use o link no domínio de produção (o mesmo da tela de login do MEGACRM),
+          não um preview da Vercel nem a página de bootstrap. Peça ao admin para
+          reenviar o convite depois de conferir o Site URL no Supabase
+          (Authentication → URL Configuration → Site URL =
+          https://seu-app.vercel.app/invite).
+        </p>
+      </AuthShell>
+    );
+  }
 
   if (loading) {
     return (
@@ -98,7 +117,7 @@ export default function InvitePage() {
   return (
     <AuthShell
       title="Aceitar convite"
-      subtitle="Defina sua senha para acessar a instância."
+      subtitle="Defina sua senha. Você entra direto no MEGACRM com o perfil que o admin escolheu — sem criar conta e sem o setup."
       footer={
         <>
           Já tem conta?{' '}

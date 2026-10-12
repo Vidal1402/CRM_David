@@ -135,7 +135,16 @@ export default function FunilPage() {
         <div className="text-label opacity-60">Carregando funil...</div>
       ) : !pipeline ? (
         <div className="glass-card p-6 text-sm text-[var(--color-text-secondary)]">
-          Nenhum funil comercial configurado.
+          <p>Nenhum funil comercial configurado.</p>
+          {role === 'admin' && (
+            <button
+              type="button"
+              onClick={() => setManageOpen(true)}
+              className="mt-3 inline-flex items-center gap-2 rounded-lg border border-[rgba(59,130,246,0.25)] px-3 py-2 text-sm text-[var(--accent-secondary)] transition hover:border-[var(--accent-primary)]"
+            >
+              <Settings2 className="h-4 w-4" /> Criar o primeiro funil
+            </button>
+          )}
         </div>
       ) : (
         <div className="flex gap-4 overflow-x-auto pb-4">

@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
@@ -16,6 +16,24 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [resetting, setResetting] = useState(false);
+  const [signupOpen, setSignupOpen] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data } = await getSupabase().rpc('signup_status');
+        if (cancelled) return;
+        const row = Array.isArray(data) ? data[0] : data;
+        setSignupOpen(Boolean(row?.first_user_pending));
+      } catch {
+        if (!cancelled) setSignupOpen(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -58,15 +76,19 @@ export default function LoginPage() {
       title="Entrar"
       subtitle="Acesse seu painel MEGACRM."
       footer={
-        <>
-          Ainda não tem conta?{' '}
-          <Link
-            to="/auth/signup"
-            className="text-[var(--accent-primary)] hover:underline font-medium"
-          >
-            Criar conta
-          </Link>
-        </>
+        signupOpen ? (
+          <>
+            Ainda não tem conta?{' '}
+            <Link
+              to="/auth/signup"
+              className="text-[var(--accent-primary)] hover:underline font-medium"
+            >
+              Criar conta
+            </Link>
+          </>
+        ) : (
+          <>Acesso somente com convite do administrador.</>
+        )
       }
     >
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -117,6 +139,11 @@ export default function LoginPage() {
           )}
         </Button>
       </form>
+      <p className="mt-4 text-center text-xs leading-relaxed text-[var(--color-text-secondary)]">
+        A senha é a do owner no bootstrap, não a da Vercel. Se não lembrar e o
+        e-mail de redefinição não chegar, defina uma senha nova em Supabase →
+        Authentication → Users.
+      </p>
     </AuthShell>
   );
 }

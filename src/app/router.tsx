@@ -3,6 +3,8 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AppLayout } from './layout/AppLayout';
 import { useSupabaseConfig } from '@/hooks/useSupabase';
 import { useAuth } from './providers/AuthProvider';
+import { isAuthCallbackLocation } from '@/lib/auth-callback';
+import { FeatureGate } from '@/components/plans/FeatureGate';
 
 // Lazy loading the page chunks keeps the initial bundle lean.
 const SetupPage = lazy(() => import('./routes/setup/SetupPage'));
@@ -49,6 +51,12 @@ function RequireSession({ children }: { children: ReactElement }) {
 function RedirectIfConfigured({ children }: { children: ReactElement }) {
   const { configured } = useSupabaseConfig();
   const { session } = useAuth();
+  const location = useLocation();
+  // Tokens de convite/reset: main.tsx já manda para /invite. Não redirecionar
+  // daqui (Navigate descarta o hash e o convidado cai no login/wizard).
+  if (isAuthCallbackLocation(location.search, location.hash)) {
+    return null;
+  }
   if (configured) {
     // Already configured → move the user forward. If they also have a
     // session, jump straight to dashboard; otherwise to login.
@@ -99,17 +107,10 @@ export function AppRouter() {
             </RequireSetup>
           }
         />
-        {/* /invite NÃO usa RedirectIfAuthenticated: o link de convite do
-            Supabase estabelece uma sessão, e o convidado precisa dela aberta
-            para definir a senha (updateUser) antes de seguir para o app. */}
-        <Route
-          path="/invite"
-          element={
-            <RequireSetup>
-              <InvitePage />
-            </RequireSetup>
-          }
-        />
+        {/* /invite NÃO usa RequireSetup nem RedirectIfAuthenticated: o link
+            do e-mail traz tokens na URL e o convidado precisa definir senha
+            sem cair no wizard /setup. */}
+        <Route path="/invite" element={<InvitePage />} />
 
         <Route
           element={
@@ -123,7 +124,14 @@ export function AppRouter() {
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/inbox" element={<InboxPage />} />
-          <Route path="/campaigns" element={<CampaignsPage />} />
+          <Route
+            path="/campaigns"
+            element={
+              <FeatureGate feature="campaigns">
+                <CampaignsPage />
+              </FeatureGate>
+            }
+          />
           {/* Templates virou aba dentro de Campanhas (Módulo 1) — preserva links salvos. */}
           <Route path="/templates" element={<Navigate to="/campaigns?tab=templates" replace />} />
           <Route path="/contacts" element={<ContactsPage />} />
